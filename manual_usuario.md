@@ -1,15 +1,15 @@
-# Manual de Usario del Sistema de Inventarios Avansado
+# Manual de usuario del Sistema de Inventarios Avanzado
 
-Bienbenido al manual de usario del Sistema de Inventarios Avansado (SIA). Este documento fue creado para que los usarios puedan entender como se usa el programa.  
+Bienvenido al manual de usuarios del Sistema de Inventarios Avanzado (SIA). Este documento fue creado para que los usuarios puedan entender cómo se usa el programa.  
 ---
 
 ## 1. Requerimientos del sistema
-Antes de instalar el programa, asegurese que su computador cumple con los requerimientos minimos:
+Antes de instalar el programa, asegúrese de que su computador cumpla con los requerimientos mínimos:
 
-- Windows 7, 8, 9 o superior (se recominda Windows 10).  
-- Memoria RAM 2GB minimo, aunque aveces funciona con menos pero se alentisa mucho.  
-- Disco duro con 250MB de espacio (en realidad necesita mas, pero no sabemos cuanto exactamente).  
-- Coneccion a Internet estable, preferiblemente rapido para las actualisaziones.
+- Windows 7, 8, 9 o superior (se recomienda Windows 10).  
+- Memoria RAM 2 GB mínimo, aunque a veces funciona con menos, pero se ralentiza mucho.  
+- Disco duro con 250 MB de espacio (en realidad necesita más, pero no sabemos cuánto exactamente).  
+- Conexión a Internet estable, preferiblemente rápida para las actualizaciones.
 
 ---
 

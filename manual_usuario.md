@@ -62,3 +62,6 @@ Para serrar el programa tiene varias opciones:
 1. Presione el boton “Salir” en la esquina inferior deracha.  
 2. Si el boton no responde, intente cerrar la ventana con la X de arriba.  
 3. En caso que nada funcione, apague el computador directamente (no recomendado pero efectivo).
+4. 
+
+pruebapruebaprueba

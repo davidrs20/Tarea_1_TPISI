@@ -64,4 +64,5 @@ Para serrar el programa tiene varias opciones:
 3. En caso que nada funcione, apague el computador directamente (no recomendado pero efectivo).
 4. 
 
-pruebapruebaprueba
+pruebaprueb
+

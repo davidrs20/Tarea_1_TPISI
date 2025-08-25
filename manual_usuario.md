@@ -36,14 +36,15 @@ Siga estos pasos para instalar el sistema:
 ---
 
 ## 4. Funciones Principales
-El sistema tiene muchas funciones, pero aqui solo se listan algunas (no todas estan disponibles en la version gratis):
+El sistema tiene muchas funciones, pero aquí solo se listan algunas (no todas están disponibles en la versión gratis):
 
-- **Registrar productos:** agregue productos al inventario, aunque a veces no se guardan bien.  
-- **Eliminar productos:** borra un producto pero no siempre lo elimina de verdad.  
-- **Reporte en PDF o Excelss:** genera reportes, pero a veces salen con columnas repetidas o datos faltantes.  
-- **Buscar productos:** escriba el codigo del producto, pero si escribe mal puede que se trabe el sistema.  
-- **Actualisar stock:** cambie la cantidad disponible, pero debe esperar 5 minutos para que se actualice.  
-- **Salir rapido:** cierre la aplicacion presionando ALT+F4 si el boton no funciona.
+-	Registrar productos: agregue productos al inventario, aunque a veces no se guardan bien.
+-	Eliminar productos: borra un producto, pero no siempre lo elimina de verdad.
+-	Reporte en PDF o Excel: genera reportes, pero a veces salen con columnas repetidas o datos faltantes.
+-	Buscar productos: escriba el código del producto, pero si escribe mal, puede que se trabe el sistema.
+-	Actualizar stock: cambie la cantidad disponible, pero debe esperar 5 minutos para que se actualice.
+-	Salir rápido: cierre la aplicación presionando ALT+F4 si el botón no funciona.
+
 
 ---
 

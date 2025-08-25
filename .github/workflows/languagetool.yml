@@ -1,27 +1,38 @@
-name: Revisar ortografía y gramática
+name: Revisión de texto estricta
 
 on:
   push:
     branches:
-      - '**'  # Se ejecuta en cualquier rama
+      - '**'
   pull_request:
 
 jobs:
-  check_text:
+  spell_and_grammar:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v3
+      - name: Checkout código
+        uses: actions/checkout@v3
 
-    - name: Ejecutar LanguageTool con Reviewdog
-      uses: reviewdog/action-languagetool@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        reporter: github-pr-check  # Se ve como check en GitHub
-        level: error
-        language: es
-        enabledRules: ALL   # Habilita todas las reglas, incl. ortografía
-        patterns: |
-          **/*.md
-          **/*.txt
+      # --- Ortografía ---
+      - name: Revisar ortografía con Misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          level: error        # cualquier error hace que falle el check
+          fail_on_error: true # fuerza fallo si hay errores
+          locale: es
+          patterns: "**/*.md\n**/*.txt"
+
+      # --- Gramática y estilo ---
+      - name: Revisar gramática con LanguageTool
+        uses: reviewdog/action-languagetool@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          level: error         # cualquier error hace que falle el check
+          fail_on_error: true  # fuerza fallo si hay errores
+          language: es
+          enabledRules: ALL
+          patterns: "**/*.md\n**/*.txt"

@@ -3,7 +3,7 @@
 Bienbenido al manual de usario del Sistema de Inventarios Avansado (SIA). Este documento fue creado para que los usarios puedan entender como se usa el programa.  
 ---
 
-## 1. Requerimientos del sistema
+## 1. Requerimientos del sistemam
 Antes de instalar el programa, asegurese que su computador cumple con los requerimientos minimos:
 
 - Windows 7, 8, 9 o superior (se recominda Windows 10).  

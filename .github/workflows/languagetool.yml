@@ -1,21 +1,41 @@
-name: LanguageTool Check via Reviewdog
+name: Lint con LanguageTool + Reviewdog
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
+    paths:
+      - '**/*.md'
+      - '**/*.txt'
+  push:
+    paths:
+      - '**/*.md'
+      - '**/*.txt'
 
 jobs:
   languagetool:
+    name: Languagetool + Reviewdog
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Run LanguageTool with reviewdog
-        uses: reviewdog/action-languagetool@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-check
-          level: info
-          patterns: "**/*.md **/*.txt"
-          language: es
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v3
+
+    - name: Configurar Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Instalar Reviewdog
+      run: |
+        curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh
+
+    - name: Descargar LanguageTool
+      run: |
+        curl -L https://github.com/languagetool-org/languagetool/releases/download/v6.5/LanguageTool-6.5.zip -o LanguageTool.zip
+        unzip LanguageTool.zip -d LanguageTool
+
+    - name: Ejecutar LanguageTool con Reviewdog
+      run: |
+        java -jar LanguageTool/LanguageTool-6.5/languagetool-commandline.jar \
+          --language es --enable all **/*.md **/*.txt --json \
+        | reviewdog -f=golint -name="LanguageTool" -reporter=github-pr-review -level=error

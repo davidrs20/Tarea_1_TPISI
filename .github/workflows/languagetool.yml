@@ -12,30 +12,20 @@ on:
 
 jobs:
   languagetool:
-    name: Languagetool + Reviewdog
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout código
       uses: actions/checkout@v3
 
-    - name: Configurar Java
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-
     - name: Instalar Reviewdog
       run: |
         curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh
 
-    - name: Descargar LanguageTool
+    - name: Lint con LanguageTool usando Docker
       run: |
-        curl -L https://github.com/languagetool-org/languagetool/releases/download/v6.5/LanguageTool-6.5.zip -o LanguageTool.zip
-        unzip LanguageTool.zip -d LanguageTool
-
-    - name: Ejecutar LanguageTool con Reviewdog
-      run: |
-        java -jar LanguageTool/LanguageTool-6.5/languagetool-commandline.jar \
-          --language es --enable all **/*.md **/*.txt --json \
+        docker run --rm -v ${{ github.workspace }}:/workspace \
+          silviof/docker-languagetool \
+          --language es --enable all /workspace/**/*.md /workspace/**/*.txt \
+          --json \
         | reviewdog -f=golint -name="LanguageTool" -reporter=github-pr-review -level=error

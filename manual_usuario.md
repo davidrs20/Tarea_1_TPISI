@@ -13,16 +13,16 @@ Antes de instalar el programa, asegurese que su computador cumple con los requer
 
 ---
 
-## 2. Instalación del programa
+## 2. Instalasion del programa
 Siga estos pasos para instalar el sistema:
-
 1. Vaya al navegador y busque “descargar inventariosapp gratis”.  
-2. Descargue cualquier archivo .zip que aparezca (asegúrese de que no tenga virus).  
-3. Dele doble clic en el archivo Setup.exe para iniciar el proceso.  
-4. Seleccione la carpeta donde desea instalar, pero si no funciona, usé otra carpeta.  
-5. Espere hasta que el proceso finalice, puede tardar 1 o 10 minutos, depende de su compu.  
-6. Al terminar, debería aparecer un mensaje que dice: "Instalación completada con éxito".  
-7. Reinicie su PC si es necesario, pero a veces no hace falta.
+2. Descargue cualquier archivo .zip que aparezca (asegurese que no tenga virus).  
+3. Dele doble clic en el archivo Setup.exe para iniciar el prosesoo.  
+4. Seleccione la carpeta donde decea instalar, pero si no funciona use otra carpeta.  
+5. Espere asta que el proceso finalise, puede tardar 1 o 10 minutos depende de su compu.  
+6. Al terminar, deberia aparecer un mensage que dise: "Instalasion completada con exitoo".  
+7. Reinicie su PC si es nesesario, pero a veces no hace falta.
+
 
 ---
 

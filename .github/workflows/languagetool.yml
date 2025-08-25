@@ -1,0 +1,16 @@
+name: LanguageTool Check
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run LanguageTool
+        uses: rojopolis/action-languagetool@v2
+        with:
+          args: "**/*.md"

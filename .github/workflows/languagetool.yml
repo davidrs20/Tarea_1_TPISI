@@ -1,17 +1,21 @@
-name: LanguageTool Check
+name: LanguageTool Check via Reviewdog
 
 on:
-  pull_request:
   push:
     branches: [ main ]
+  pull_request:
 
 jobs:
-  check:
+  languagetool:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run LanguageTool
-        uses: lucasdemarchi/languagetool-action@v1
+
+      - name: Run LanguageTool with reviewdog
+        uses: reviewdog/action-languagetool@v1
         with:
-          files: "**/*.{md,txt}"
-          language: "es"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          level: error
+          patterns: "**/*.md **/*.txt"
+          language: es
